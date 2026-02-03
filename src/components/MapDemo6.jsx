@@ -4,7 +4,6 @@ export const MapDemo6 = () => {
    var books = [
       {
       id: 1,
-      photo: "",
       title: "Wall Street Titan",
       author: "Anna Zaires",
       genre: "romance",
