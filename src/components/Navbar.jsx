@@ -26,11 +26,24 @@ export const Navbar = () => {
                         <Link className="nav-link" to="/netflixsports">Sports</Link>
                      </li>
                      <li className="nav-item">
+                        <Link className="nav-link" to="/fundemo1">FunDemo</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/usestate1">UseState1</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/usestate2">UseState2</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/usestate3">UseState3</Link>
+                     </li>
+                     {/* <li className="nav-item">
                         <Link className="nav-link" to="/netflixtv">TV</Link>
                      </li>
                      <li className="nav-item">
                         <Link className="nav-link" to="/netflixaccount">Account</Link>
-                     </li>
+                     </li> */}
+
                   </ul>
                </div>
             </div>

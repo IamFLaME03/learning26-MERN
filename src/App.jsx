@@ -25,6 +25,10 @@ import { NetflixAccountComponent } from "./components/NetflixAccountComponent"
 import { ErrorPageNotFound } from "./components/ErrorPageNotFound"
 import { WatchComponent } from "./components/Watch"
 import { TeamDetails } from "./components/TeamDetails"
+import { FunctionDemo1 } from "./components/FunctionDemo1"
+import {UseStateDemo1} from "./components/UseStateDemo1"
+import { UseStateDemo2 } from "./components/UseStateDemo2"
+import { UseStateDemo3 } from "./components/UseStateDemo3"
 
 function App() {
 
@@ -42,6 +46,10 @@ function App() {
         <Route path="/*" element={<ErrorPageNotFound />} ></Route>
         <Route path="/watch/:name" element={<WatchComponent />} ></Route>
         <Route path="/teamdetails/:teamname" element={<TeamDetails />} ></Route>
+        <Route path="/fundemo1" element={<FunctionDemo1 />} ></Route>
+        <Route path="/usestate1" element={<UseStateDemo1 />} ></Route>
+        <Route path="/usestate2" element={<UseStateDemo2 />} ></Route>
+        <Route path="/usestate3" element={<UseStateDemo3 />} ></Route>
       </Routes>
     </div>
   )
