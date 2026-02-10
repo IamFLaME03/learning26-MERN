@@ -34,16 +34,27 @@ export const Navbar = () => {
                      <li className="nav-item">
                         <Link className="nav-link" to="/usestate2">UseState2</Link>
                      </li>
+                     {/*
                      <li className="nav-item">
                         <Link className="nav-link" to="/usestate3">UseState3</Link>
                      </li>
-                     {/* <li className="nav-item">
+                     <li className="nav-item">
                         <Link className="nav-link" to="/netflixtv">TV</Link>
                      </li>
                      <li className="nav-item">
                         <Link className="nav-link" to="/netflixaccount">Account</Link>
                      </li> */}
 
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/employee">Employee</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/inputdemo1">InputDmeo</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/propdemo">PropDemo</Link>
+                     </li>
+                     
                   </ul>
                </div>
             </div>

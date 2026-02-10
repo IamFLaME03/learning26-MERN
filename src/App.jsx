@@ -29,6 +29,9 @@ import { FunctionDemo1 } from "./components/FunctionDemo1"
 import {UseStateDemo1} from "./components/UseStateDemo1"
 import { UseStateDemo2 } from "./components/UseStateDemo2"
 import { UseStateDemo3 } from "./components/UseStateDemo3"
+import { Employee } from "./components/Employee"
+import { InputDemo1 } from "./components/input/InputDemo1"
+import { TableTask } from "./components/props/TableTask"
 
 function App() {
 
@@ -50,6 +53,9 @@ function App() {
         <Route path="/usestate1" element={<UseStateDemo1 />} ></Route>
         <Route path="/usestate2" element={<UseStateDemo2 />} ></Route>
         <Route path="/usestate3" element={<UseStateDemo3 />} ></Route>
+        <Route path="/employee" element={<Employee />} ></Route>
+        <Route path="/inputdemo1" element={<InputDemo1 />} ></Route>
+        <Route path="/propdemo" element={<TableTask />} ></Route>
       </Routes>
     </div>
   )
