@@ -16,25 +16,24 @@ export const Navbar = () => {
                      <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to="/netflixhome">Home</Link>
                      </li>
-                     <li className="nav-item">
+                     {/*<li className="nav-item">
                         <Link className="nav-link" to="/netflixmovies">Movies</Link>
                      </li>
-                     <li className="nav-item">
+                      <li className="nav-item">
                         <Link className="nav-link" to="/netflixshows">Shows</Link>
                      </li>
                      <li className="nav-item">
                         <Link className="nav-link" to="/netflixsports">Sports</Link>
-                     </li>
+                     </li> 
                      <li className="nav-item">
                         <Link className="nav-link" to="/fundemo1">FunDemo</Link>
-                     </li>
+                     </li> 
                      <li className="nav-item">
                         <Link className="nav-link" to="/usestate1">UseState1</Link>
                      </li>
                      <li className="nav-item">
                         <Link className="nav-link" to="/usestate2">UseState2</Link>
                      </li>
-                     {/*
                      <li className="nav-item">
                         <Link className="nav-link" to="/usestate3">UseState3</Link>
                      </li>
@@ -43,17 +42,32 @@ export const Navbar = () => {
                      </li>
                      <li className="nav-item">
                         <Link className="nav-link" to="/netflixaccount">Account</Link>
-                     </li> */}
-
+                     </li> 
                      <li className="nav-item">
                         <Link className="nav-link" to="/employee">Employee</Link>
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link" to="/inputdemo1">InputDmeo</Link>
+                        <Link className="nav-link" to="/inputdemo1">InputDemo1</Link>
+                     </li> */}
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/inputdemo2">InputDemo2</Link>
                      </li>
                      <li className="nav-item">
                         <Link className="nav-link" to="/propdemo">PropDemo</Link>
                      </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/formdemo1">FormDemo1</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/formdemo2">FormDemo2</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/formdemo3">FormDemo3</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/formdemo4">FormDemo4</Link>
+                     </li>
+
                      
                   </ul>
                </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { TableComponent } from './TableComponent';
+import { TableComponent } from '../TableComponent';
 
 export const SubEmployeeList = (props) => {
    console.log("subemplist Props : ", props);
