@@ -32,10 +32,13 @@ import { Employee } from "./components/props/Employee";
 import { InputDemo1 } from "./components/input/InputDemo1";
 import { TableTask } from "./components/props/TableTask";
 import { FormDemo1 } from "./components/forms/FormDemo1";
-import { FormDemo2 } from "./components/forms/FormDemo2";
-import { FormDemo3 } from "./components/forms/FormDemo3";
-import { FormDemo4 } from "./components/forms/FormDemo4";
+import { Formdemo2 } from "./components/forms/FormDemo2";
 import { InputDemo2 } from "./components/input/InputDemo2";
+import { FormDemo4_task } from "./components/forms/FormDemo4_task";
+import { FormDemo3_task } from "./components/forms/FormDemo3_task";
+import { FormDemo2_task } from "./components/forms/FormDemo2_task";
+import { Formdemo5_task } from "./components/forms/FormDemo5_task";
+import { FormDemo3 } from "./components/forms/FormDemo3";
 
 function App() {
   return (
@@ -66,13 +69,16 @@ function App() {
         <Route path="/usestate2" element={<UseStateDemo2 />}></Route>
         <Route path="/usestate3" element={<UseStateDemo3 />}></Route>
         <Route path="/employee" element={<Employee />}></Route>
+        <Route path="/propdemo" element={<TableTask />}></Route>
         <Route path="/inputdemo1" element={<InputDemo1 />}></Route>
         <Route path="/inputdemo2" element={<InputDemo2 />}></Route>
-        <Route path="/propdemo" element={<TableTask />}></Route>
         <Route path="/formdemo1" element={<FormDemo1 />}></Route>
-        <Route path="/formdemo2" element={<FormDemo2 />}></Route>
+        <Route path="/formdemo2" element={<Formdemo2 />}></Route>
+        <Route path="/formdemo2_task" element={<FormDemo2_task />}></Route>
+        <Route path="/formdemo3_task" element={<FormDemo3_task />}></Route>
+        <Route path="/formdemo4_task" element={<FormDemo4_task />}></Route>
+        <Route path="/formdemo5_task" element={<Formdemo5_task />}></Route>
         <Route path="/formdemo3" element={<FormDemo3 />}></Route>
-        <Route path="/formdemo4" element={<FormDemo4 />}></Route>
       </Routes>
     </div>
   );

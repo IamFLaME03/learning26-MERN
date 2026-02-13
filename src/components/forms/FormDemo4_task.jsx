@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-export const FormDemo4 = () => {
+export const FormDemo4_task = () => {
 
    const {register, handleSubmit} = useForm()
    const [userdata, setUserdata] = useState({})

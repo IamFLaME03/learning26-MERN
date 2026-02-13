@@ -1,61 +1,114 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 
-export const FormDemo2 = () => {
+export const Formdemo2 = () => {
 
-   const {register, handleSubmit} = useForm()
-   const [userdata, setUserdata] = useState({})
-   const [isSubmited, setisSubmited] = useState(false)
+const  {register,handleSubmit,formState:{errors}}= useForm()
 
-   const submitHandler = (data) => {
-      console.log(data);
-      setUserdata(data)
-      setisSubmited(true)
-   }
+console.log("errors...",errors)
+
+const validationschema ={
+   
+    namevalidator:{
+        required:{
+          value:true,
+          message:"please enter the name*"
+        }
+    },
+
+    agevalidator:{
+      required:{
+        value:true,
+        message:"age is required*"
+      },
+      min:{
+        value:18,
+        message:"minimum age is 18*"
+      },
+      max:{
+        value:60,
+        message:"maximum age is 60"
+      }
+    },
+
+    emailvalidator:{
+        required:{
+            value:true,
+            message:"please enter the email*"
+        }
+    },
+
+    passwordvalidtor:{
+      required:{
+           value:true,
+           message:"please enter the password*"
+      },
+      minLength:{
+        value:5,
+        message:"please enter more then 5 characters*"
+      },
+      maxLength:{
+        value:30,
+        message:"max length is 30 characters*"
+      }
+    },
+
+    phonevalidator:{
+      required:{
+        value:true,
+        message:"phone number is required*"
+      },
+      minLength:{
+        value:10,
+        message:"minimun length of phone number is a 10 digits*"
+      },
+      maxLength:{
+        value:10,
+        message:"maximum length of phone number is a 10 digits*"
+      }
+    }
+}
+
+const submitHandler = (data)=>{
+        alert("form subbmited...")
+        console.log(data)
+    }
 
   return (
-    <div style={{textAlign: 'center'}}>
-      <h1>FormDemo2</h1>
-      <form onSubmit={handleSubmit(submitHandler)}>
-         <div>
-            <label>Moviename :</label>
-            <input type="text" {...register("name")} />
-         </div>
-         <div>
-            <label>Date :</label>
-            <input type="number" {...register("year")} />
-         </div>
-         <div>
-            <label>Director :</label>
-            <input type="text" {...register("director")} />
-         </div>
-         <div>
-            <label>Genre :</label>
-            <br />
-            Action<input type='radio' value="action" {...register("genre")} ></input>
-            Comady<input type='radio' value="Comady" {...register("genre")} ></input>
-            Horror<input type='radio' value="Horror" {...register("genre")} ></input>
-            Thriller<input type='radio' value="Thriller" {...register("genre")} ></input>
-         </div>
-         <div>
-            <label>Cast :</label>
-            <input type="file" {...register("poster")} />
-         </div>
-         <div>
-            <input type="submit"/>
-         </div>
+    <div style={{textAlign:"center"}}>
+    <h1>Formdemo4</h1>
+    <form onSubmit={handleSubmit(submitHandler)}>
+      <div>
+        <label>Name :</label>
+        <input type="text" {...register("name",validationschema.namevalidator)}></input>
+        <span style={{color:"red"}}>{errors.name?.message}</span>
+      </div>
 
-         {
-         isSubmited == true && <div>
-               <h1>Output : </h1>
-               <h2>MovieName : {userdata.name}</h2>
-               <h2>Year : {userdata.year}</h2>
-               <h2>Director : {userdata.director}</h2>
-               <h2>Genre : {userdata.genre}</h2>
-               <h2>Poster : <img src={userdata.poster} alt="POSTER IMAGE"/></h2>
-            </div>
-      }
-      </form>
+      <div>
+        <label>age : </label>
+        <input type="number" {...register("age",validationschema.agevalidator)}></input>
+        <span style={{color:"red"}}>{errors.age && errors.age.message}</span>
+      </div>
+
+       <div>
+          <label>Email : </label>
+          <input type="text" {...register("email",validationschema.emailvalidator)}></input>
+          <span style={{color:"red"}}> {errors.email?.message}</span>
+       </div>
+
+       <div>
+          <label>Password :</label>
+          <input type="password" {...register("password",validationschema.passwordvalidtor)}></input>
+          <span style={{color:"red"}}>{errors.password?.message}</span>
+       </div>
+
+       <div>
+        <label>Phono number: </label>
+        <input type="number" {...register("phonenumber",validationschema.phonevalidator)}></input>
+        <span style={{color:"red"}}>{errors.phonenumber && errors.phonenumber.message}</span>
+       </div>
+       <input type="submit"></input>
+       </form>
     </div>
   )
 }

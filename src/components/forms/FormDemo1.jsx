@@ -19,7 +19,7 @@ export const FormDemo1 = () => {
       <form onSubmit={handleSubmit(submitHandler)}>
          <div>
             <label>firstName : </label>
-            <input type='text' {...register("firstname")} ></input>
+            <input type='text' {...register("firstname")} required></input>
          </div>
          <div>
             <label>lastName : </label>
@@ -55,7 +55,7 @@ export const FormDemo1 = () => {
                <h2>Age : {userdata.age}</h2>
                <h2>Gender : {userdata.gender}</h2>
                <h2>Hobbies : {
-                  userdata.hobbies?.map((hobby) => {
+                  userdata.hobbies.map((hobby) => {
                      return <span>{hobby}  </span>
                   })
                }</h2>
