@@ -39,6 +39,8 @@ import { FormDemo3_task } from "./components/forms/FormDemo3_task";
 import { FormDemo2_task } from "./components/forms/FormDemo2_task";
 import { Formdemo5_task } from "./components/forms/FormDemo5_task";
 import { FormDemo3 } from "./components/forms/FormDemo3";
+import { FormDemo4 } from "./components/forms/FormDemo4";
+import { FormDemo6_task } from "./components/forms/FormDemo6_task";
 
 function App() {
   return (
@@ -79,6 +81,8 @@ function App() {
         <Route path="/formdemo4_task" element={<FormDemo4_task />}></Route>
         <Route path="/formdemo5_task" element={<Formdemo5_task />}></Route>
         <Route path="/formdemo3" element={<FormDemo3 />}></Route>
+        <Route path="/formdemo4" element={<FormDemo4 />}></Route>
+        <Route path="/formdemo6_task" element={<FormDemo6_task />}></Route>
       </Routes>
     </div>
   );
