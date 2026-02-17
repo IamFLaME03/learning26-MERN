@@ -41,6 +41,9 @@ import { Formdemo5_task } from "./components/forms/FormDemo5_task";
 import { FormDemo3 } from "./components/forms/FormDemo3";
 import { FormDemo4 } from "./components/forms/FormDemo4";
 import { FormDemo6_task } from "./components/forms/FormDemo6_task";
+import { Apidemo1 } from "./components/api/Apidemo1";
+import { Apidemo2 } from "./components/api/Apidemo2";
+import { Apidemo3 } from "./components/api/Apidemo3";
 
 function App() {
   return (
@@ -67,13 +70,19 @@ function App() {
         <Route path="/watch/:name" element={<WatchComponent />}></Route>
         <Route path="/teamdetails/:teamname" element={<TeamDetails />}></Route>
         <Route path="/fundemo1" element={<FunctionDemo1 />}></Route>
+
+        {/* hooks */}
         <Route path="/usestate1" element={<UseStateDemo1 />}></Route>
         <Route path="/usestate2" element={<UseStateDemo2 />}></Route>
         <Route path="/usestate3" element={<UseStateDemo3 />}></Route>
         <Route path="/employee" element={<Employee />}></Route>
         <Route path="/propdemo" element={<TableTask />}></Route>
+
+        {/* Input */}
         <Route path="/inputdemo1" element={<InputDemo1 />}></Route>
         <Route path="/inputdemo2" element={<InputDemo2 />}></Route>
+
+        {/* Forms */}
         <Route path="/formdemo1" element={<FormDemo1 />}></Route>
         <Route path="/formdemo2" element={<Formdemo2 />}></Route>
         <Route path="/formdemo2_task" element={<FormDemo2_task />}></Route>
@@ -83,6 +92,14 @@ function App() {
         <Route path="/formdemo3" element={<FormDemo3 />}></Route>
         <Route path="/formdemo4" element={<FormDemo4 />}></Route>
         <Route path="/formdemo6_task" element={<FormDemo6_task />}></Route>
+
+        {/* Api */}
+        <Route path="/apidemo1" element={<Apidemo1 />}></Route>
+        <Route path="/apidemo2" element={<Apidemo2 />}></Route>
+        <Route path="/apidemo3" element={<Apidemo3 />}></Route>
+
+
+
       </Routes>
     </div>
   );
