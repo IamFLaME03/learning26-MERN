@@ -44,6 +44,9 @@ import { FormDemo6_task } from "./components/forms/FormDemo6_task";
 import { Apidemo1 } from "./components/api/Apidemo1";
 import { Apidemo2 } from "./components/api/Apidemo2";
 import { Apidemo3 } from "./components/api/Apidemo3";
+import { OMDBSearch } from "./components/api/OMDBSearch";
+import { OMDBMovieDetails } from "./components/api/OMDBMovieDetails";
+import { Apidemo4 } from "./components/api/Apidemo4";
 
 function App() {
   return (
@@ -97,6 +100,9 @@ function App() {
         <Route path="/apidemo1" element={<Apidemo1 />}></Route>
         <Route path="/apidemo2" element={<Apidemo2 />}></Route>
         <Route path="/apidemo3" element={<Apidemo3 />}></Route>
+        <Route path="/omdb" element={<OMDBSearch />}></Route>
+        <Route path="/omdb/:id" element={<OMDBMovieDetails />}></Route>
+        <Route path="/apidemo4" element={<Apidemo4 />}></Route>
 
 
 
