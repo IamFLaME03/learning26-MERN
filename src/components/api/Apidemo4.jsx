@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const Apidemo4 = () => {
 
@@ -50,13 +52,16 @@ export const Apidemo4 = () => {
             message: 'Password must be 15 characters long'
          }
       },
-      
+
    }
 
-      const submitHandler = async (data) => {
+   const submitHandler = async (data) => {
       // console.log(data);
       const res = await axios.post("https://node5.onrender.com/user/user/", data)
       console.log(res);
+      toast.success("Form submitted", {
+         position: "bottom-right"
+      });
    }
 
    return (
@@ -113,6 +118,7 @@ export const Apidemo4 = () => {
             <div>{errors.age?.message}</div>
             <div>{errors.isActive?.message}</div>
          </div>
-      </div>
+         <ToastContainer />
+      </div >
    )
 }
